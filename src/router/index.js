@@ -69,384 +69,223 @@ Vue.use(VueRouter);
     name: 'AboutSystem',
     
     component: AboutSystem,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', '7 шагов по внедрению'],
-    },
   },
   {
     path: '/sevenSteps',
     name: 'SevenSteps',
     
     component: SevenSteps,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', '7 шагов по внедрению'],
-    },
   },
   {
     path: '/buildNewBusinessModels',
     name: 'BuildNewBusinessModels',
     
     component: BuildNewBusinessModels,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/cognitionLevel',
     name: 'CognitionLevel',
     
     component: CognitionLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/configurationLevel',
     name: 'ConfigurationLevel',
     
     component: ConfigurationLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/connectionLevel',
     name: 'ConnectionLevel',
     
     component: ConnectionLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/conversionLevel',
     name: 'ConversionLevel',
     
     component: ConversionLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/costsAndFinancing',
     name: 'CostsAndFinancing',
     
     component: CostsAndFinancing,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/cps',
     name: 'CPS',
     
     component: CPS,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/createDigitalizationPlan',
     name: 'CreateDigitalizationPlan',
     
     component: CreateDigitalizationPlan,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/cyberAndCongruenceLevel',
     name: 'CyberAndCongruenceLevel',
     
     component: CyberAndCongruenceLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/digitalToolsUseful',
     name: 'DigitalToolsUseful',
     
     component: DigitalToolsUseful,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/digitizeKnowledge',
     name: 'DigitizeKnowledge',
     
     component: DigitizeKnowledge,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/example',
     name: 'Example',
     
     component: Example,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Гибкое производство', 'Система единичного заказа', 'Задачи'],
-      slider: false,
-      readMore: true,
-    },
+
   },
   {
     path: '/fiveSteps',
     name: 'FiveSteps',
     
     component: FiveSteps,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/convinceEmployees',
     name: 'ConvinceEmployees',
     
     component: ConvinceEmployees,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/howItWorks',
     name: 'HowItWorks',
     
     component: HowItWorks,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/howSafeIsIt',
     name: 'HowSafeIsIt',
     
     component: HowSafeIsIt,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/implementationAndPotential',
     name: 'ImplementationAndPotential',
     
     component: ImplementationAndPotential,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Реализация', 'Потенциал'],
-      slider: false,
-      readMore: true,
-    },
   },
   {
     path: '/implementationPlanning',
     name: 'ImplementationPlanning',
     
     component: ImplementationPlanning,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/implementing',
     name: 'Implementing',
     
     component: Implementing,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/increaseSales',
     name: 'IncreaseSales',
     
     component: IncreaseSales,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/industry',
     name: 'Industry',
     
     component: Industry,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Введение', 'Глобальные сети', 'Задачи'],
-      slider: false,
-      readMore: true,
-    },
   },
   {
     path: '/networked',
     name: 'Networked',
     
     component: Networked,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Единая система', 'Будущие сценарии'],
-      slider: false,
-      readMore: true,
-    },
   },
   {
     path: '/industryLevel',
     name: 'IndustryLevel',
     
     component: IndustryLevel,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/inventory',
     name: 'Inventory',
     
     component: Inventory,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Что должно быть достигнуто?', 'На какие вопросы нужно ответить?', 'Контрольный список'],
-    },
   },
   {
     path: '/levelInIndustry',
     name: 'LevelInIndustry',
     
     component: LevelInIndustry,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/limitation',
     name: 'Limitation',
     
     component: Limitation,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-      menu: ['Что должно быть достигнуто?', 'На какие вопросы нужно ответить?', 'Контрольный список'],
-    },
   },
   {
     path: '/clients',
     name: 'Clients',
     
     component: Clients,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/architecture',
     name: 'Architecture',
     
     component: Architecture,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/myCompany',
     name: 'MyCompany',
     
     component: MyCompany,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', '7 шагов по внедрению'],
-    },
   },
   {
     path: '/myCompanyReady',
     name: 'MyCompanyReady',
     
     component: MyCompanyReady,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/newIndustry',
     name: 'NewIndustry',
     
     component: NewIndustry,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/optimize',
     name: 'Optimize',
     
     component: Optimize,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
   {
     path: '/smartFactory',
     name: 'SmartFactory',
     
     component: SmartFactory,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/technical',
     name: 'Technical',
     
     component: Technical,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Обзор', 'Industry 4.0'],
-    },
   },
   {
     path: '/whyDigitize',
     name: 'WhyDigitize',
     
     component: WhyDigitize,
-    meta: {
-      layout: 'TextLayout',
-      nav: ['Главная', 'Вопросы бизнеса', 'Почему я должен оцифровывать компанию'],
-    },
   },
 
 

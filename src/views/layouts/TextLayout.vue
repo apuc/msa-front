@@ -1,25 +1,29 @@
 <template>
   <div class="layout">
-    <Header />
-    <div class="layout__content">
-        <slot name="nav"></slot>
-        <slot name="menu"></slot>
-        <router-view></router-view>
-        <slot name="slider"></slot>
-    </div>
-    <Footer />
+    <Nav v-if="nav" :nav="nav" />
+    <SidebarMenu v-if="menu" :menu="menu" />
+    <Slider v-if="slider" :slider="slider" />
+    <ReadMore v-if="readMore" />
   </div>
 </template>
 
 <script>
 
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
+import Nav from '@/components/Nav.vue'
+import SidebarMenu from '@/components/SidebarMenu.vue'
+import Slider from '@/components/Slider.vue'
+import ReadMore from '@/components/ReadMore.vue'
 
 export default {
   name: 'TextLayout',
   components: {
-    Header, Footer
+    Nav, SidebarMenu, Slider, ReadMore
+  },
+  props: {
+    nav: Array,
+    menu: Array,
+    slider: Array,
+    readMore: Array
   }
 }
 </script>
