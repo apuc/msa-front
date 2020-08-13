@@ -3,7 +3,7 @@
     <Nav v-if="nav" :nav="nav" />
     <SidebarMenu v-if="menu" :menu="menu" />
     <Slider v-if="slider" :slider="slider" />
-    <ReadMore v-if="readMore" />
+    <ReadMore v-if="readMore" :readMore="readMore" />
   </div>
 </template>
 

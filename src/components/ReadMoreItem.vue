@@ -17,7 +17,10 @@ export default {
 </script>
 
 <style scoped>
-.additionally-list__link{
+.additionally-list__page {
+    list-style: none;
+}
+.additionally-list__link {
     text-align: left;
     text-transform: uppercase;
     text-decoration: none;

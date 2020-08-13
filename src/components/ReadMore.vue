@@ -19,13 +19,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.additionally{
-    padding-top: 75px;
-    display: flex;
-    
-    &-list{
-        padding-top: 3px;
-        margin-left: 24px;
+    .additionally{
+        padding-top: 75px;
+        display: flex;
+        
+        &-list{
+            padding-top: 3px;
+            margin-left: 24px;
+        }
     }
-}
+
+    .content-interpretation__definition{
+        padding-top: 25px ;
+        padding-bottom: 20px;
+        font: 20px/36px 'Alethia Pro';
+        color: #000000;
+    }
+
+    .stages{
+        margin-right: 21px;
+    }
 </style>

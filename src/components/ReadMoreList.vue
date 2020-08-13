@@ -1,6 +1,8 @@
 <template>
     <ul class="additionally-list">
-        <ReadMoreItem v-for="item in list" :key="item.link" />
+        <ReadMoreItem v-for="item in list" :key="item.link"
+            :item="item"
+        />
     </ul>
 </template>
 
@@ -16,3 +18,11 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.additionally-list{
+    padding-top: 3px;
+    margin-left: 24px;
+
+}
+</style>
