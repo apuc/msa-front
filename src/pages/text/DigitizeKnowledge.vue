@@ -4,6 +4,7 @@
         :nav="nav"
         :menu="menu"
         :readMore="readMore"
+        :content="content"
     />
   </div>
 </template>
@@ -42,6 +43,15 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Как я могу оцифровать знания?'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...'
+          }
+        },]
     }
   }
 }

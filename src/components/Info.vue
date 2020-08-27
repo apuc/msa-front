@@ -44,4 +44,10 @@ export default {
         line-height: 56px;
         color: #000000;
     }
+
+    @media screen and (max-width: 800px) {
+        .involucre {
+            flex-direction: column;
+        }
+    }
 </style>

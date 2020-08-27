@@ -66,4 +66,17 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .catalogue {
+        width: 90%;
+        margin: 0 auto;
+
+        &__image{
+            &--img{
+                object-fit: initial;
+            }
+        }
+    }
+}
 </style>

@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :menu="menu"
+        :content="content"
         :readMore="readMore"
     />
   </div>
@@ -46,6 +47,66 @@ export default {
             {text: 'Примеры внедрения', link: '/'},
           ]
         ],
+        content:[{
+          component: 'ContentTitle',
+          value: 'Реализация и потенциал Industry 4.0?'
+        },{
+          component: 'ContentSubtitle',
+          value: 'Реализация'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Стандартизация",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Управление",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Инфраструктура",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Безопасность",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Организация",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },],
+          }
+        },{
+          component: 'ContentSubtitle',
+          value: 'Потенциал'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Стандартизация",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Управление",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Инфраструктура",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Безопасность",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },{
+                  title: "Организация",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+              },],
+          }
+        }]
     }
   }
 }

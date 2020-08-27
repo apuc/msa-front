@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-        <router-view/>
+    <router-view/>
     <Footer />
   </div>
 </template>
@@ -111,9 +111,16 @@ export default {
 }
 
 .container {
+    position: relative;
+    height: 100%;
     margin: 0 auto;
     width: 100%;
     max-width: 1170px;
 }
 
+@media screen and (max-width: 800px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
 </style>

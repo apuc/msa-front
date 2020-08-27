@@ -9,9 +9,9 @@
                     </clipPath>
                 </defs>
                 <text class="b" transform="translate(201 9)">
-                    <tspan x="0" y="13">Manufacturing</tspan>
-                    <tspan x="0" y="27">Stream</tspan>
-                    <tspan x="0" y="41">Automation</tspan>
+                    <tspan x="0" y="13" class="mobile-hidden">Manufacturing</tspan>
+                    <tspan x="0" y="27" class="mobile-hidden">Stream</tspan>
+                    <tspan x="0" y="41" class="mobile-hidden">Automation</tspan>
                 </text>
                 <text class="c" transform="translate(81 50)">
                     <tspan x="0" y="13">System</tspan>
@@ -63,3 +63,11 @@
         </a>
     </figure>
 </template>
+
+<style scoped>
+        @media screen and (max-width: 800px) {
+                .header__logotype {
+                        padding-left: .5rem;
+                }
+        }
+</style>

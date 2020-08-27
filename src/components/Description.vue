@@ -9,6 +9,15 @@
                 <a :href="link.to">{{link.text}}</a>
             </li>
         </ul>
+
+        <div v-if="description.slider" class="header__slider">
+            <div class="header__dots">
+                <div class="header__dot" :class="`${index===0?'active':''}`" v-for="(dot,index) in description.slider" :key="index"></div>
+            </div>
+            <div class="header__arrows">
+
+            </div>
+        </div>
     </article>
 </template>
 
@@ -18,6 +27,8 @@ export default {
         description: {
             title: String,
             text: String,
+            links: Array,
+            slider: Array
         },
     }
 }
@@ -80,5 +91,36 @@ export default {
             font-weight: 300;
             color: #FFFFFF
         }
+    }
+
+    .header__slider {
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        height: 70px;
+        width: 100%;
+        display: flex;
+    }
+
+    .header__dots {
+        width: 65%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #aaaaaa;
+
+        &.active {
+            background-color: #0059bd;
+        }
+    }
+
+    .header__arrows {
+        width: 35%
     }
 </style>

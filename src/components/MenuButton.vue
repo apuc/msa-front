@@ -77,4 +77,18 @@
         margin: 6px auto;
         background: #FFFFFF 0 0 no-repeat padding-box;
     }
+
+    @media screen and (max-width: 800px) {
+        .btn__open {
+            justify-content: space-around;
+            &--icon {
+                background-color: #fff;
+
+                .line {
+                    background: #888888
+                }
+            }
+        }
+        
+    }
 </style>

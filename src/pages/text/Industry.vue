@@ -4,6 +4,7 @@
         :nav="nav"
         :menu="menu"
         :readMore="readMore"
+        :content="content"
     />
   </div>
 </template>
@@ -30,22 +31,98 @@ export default {
             link: '/',
         }],
         menu: [{
-            text: 'Единая система',
+            text: 'Введение',
             link: '/',
         },{
-            text: 'Будущие сценарии',
+            text: 'Глобальные сети',
             link: '/',
         }, ],
-        readMore: [
-          [
-            {text: 'Реализация и потенциал', link: '/'},
-            {text: 'I4 часть сетевого мира', link: '/'},
-            {text: 'CPS', link: '/'},
-          ],[
-            {text: 'Smart factory', link: '/'},
-            {text: 'Примеры внедрения', link: '/'},
-          ]
-        ],
+        slider: [{
+          image: '',
+          text: 'Почему я должен оцифровывать компанию?',
+          link: '/'
+        },{
+          image: '',
+          text: 'Как мне создать план по цифровизации?',
+          link: '/'
+        },{
+          image: '',
+          text: 'Какие цифровые инструменты полезны?',
+          link: '/'
+        },],
+        content: [{
+            component: "contentTitle",
+            value: "Industry 4.0"
+        },
+        {
+            component: "contentSubtitle",
+            value: "Введение"
+        },
+        {
+            component: "contentParagraph",
+            value: {
+                text: "Благодаря Industry 4.0 Германия создала..."
+            }
+        },
+        {
+            component: "contentParagraph",
+            value: {
+                text: "Впервые термин Industry 4.0 был представлен..."
+            }
+        },
+        {
+            component: "contentParagraph",
+            value: {
+                text: "Киберфизическая производственная система CPPS...",
+                styled: true,
+            }
+        },{
+            element: 'contentImage',
+            value: {
+                src: ""
+            }
+        }, {
+            component: "contentParagraph",
+            value: {
+                text: "Киберфизическая система CPS...",
+                styled: true,
+            }
+        },{
+            element: 'contentImage',
+            value: {
+                src: ""
+            }
+        },{
+            component: "contentSubtitle",
+            value: "Глобальные сети"
+        },{
+            component: "contentParagraph",
+            value: {
+                text: "Первые 3 промышленные революции произошли в результате механизации...",
+            }
+        },{
+            component: "contentParagraph",
+            value: {
+                text: "Сеть создания добавленной стоимости...",
+                styled: true
+            }
+        },
+        {
+            element: 'contentImage',
+            value: {
+                src: ""
+            }
+        },
+        {
+            component: "contentSubtitle",
+            value: "Задачи"
+        },
+        {
+            component: "contentParagraph",
+            value: {
+                text: "Industry 4.0 обладает огромным потенциалом...",
+            }
+        },]
     }
   }
 }

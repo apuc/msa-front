@@ -4,6 +4,7 @@
         :nav="nav"
         :menu="menu"
         :slider="slider"
+        :content="content"
     />
   </div>
 </template>
@@ -52,6 +53,45 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Как мне создать план по цифровизации'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "contentList",
+          value: {
+              items: [{
+                  title: "В общении",
+                  text: 'Описание...'
+              },{
+                  title: "В логистике",
+                  text: 'Описание...'
+              },{
+                  title: "Во внутренних процессах",
+                  text: 'Описание...'
+              },{
+                  title: "В инфраструктуре",
+                  text: 'Описание...'
+              },{
+                  title: "На производстве",
+                  text: 'Описание...'
+              },],
+          }
+        },]
     }
   }
 }

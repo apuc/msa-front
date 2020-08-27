@@ -2,6 +2,7 @@
   <div class="CreateDigitalizationPlan">
     <TextLayout 
         :nav="nav"
+        :content="content"
         :slider="slider"
     />
   </div>
@@ -41,6 +42,45 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Как мне создать план по цифровизации?'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentList',
+          value: {
+            items: [{
+              title: 'В общении',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            },{
+              title: 'В логистике',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            },{
+              title: 'Во внутренних процессах',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            },{
+              title: 'В инфраструктуре',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            },{
+              title: 'На производстве',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            },]
+          }
+        }]
     }
   }
 }

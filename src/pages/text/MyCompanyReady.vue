@@ -4,6 +4,7 @@
         :nav="nav"
         :menu="menu"
         :readMore="readMore"
+        :content="content"
     />
   </div>
 </template>
@@ -42,7 +43,38 @@ export default {
             text: 'Смена поставщика',
             link: '/',
         }],
-        readMore: true,
+        slider: [{
+          image: '',
+          text: 'Почему я должен оцифровывать компанию?',
+          link: '/'
+        },{
+          image: '',
+          text: 'Как мне создать план по цифровизации?',
+          link: '/'
+        },{
+          image: '',
+          text: 'Какие цифровые инструменты полезны?',
+          link: '/'
+        },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Моя компаниия готова для внедрения MSA?'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        }]
     }
   }
 }

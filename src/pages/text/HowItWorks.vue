@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :slider="slider"
+        :content="content"
     />
   </div>
 </template>
@@ -41,6 +42,20 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Как работает MSA'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Говорить о том, что компания существует в рамках Industry 4.0 можно только если ...'
+          }
+        },{
+          component: 'ContentImage',
+          value: {
+            src: ''
+          }
+        },]
     }
   }
 }

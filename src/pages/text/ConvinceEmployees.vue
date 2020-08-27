@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :slider="slider"
+        :content="content"
     />
   </div>
 </template>
@@ -41,6 +42,15 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Как мне убедить моих сотрудников в оцифровке'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...'
+          }
+        },]
     }
   }
 }

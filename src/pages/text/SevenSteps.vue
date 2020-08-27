@@ -2,8 +2,8 @@
   <div class="SevenSteps">
     <TextLayout 
         :nav="nav"
-        :menu="menu"
-        :readMore="readMore"
+        :content="content"
+        :slider="slider"
     />
   </div>
 </template>
@@ -29,20 +29,54 @@ export default {
             text:'Industry 4.0',
             link: '/',
         }],
-        menu: [{
-            text: 'Гибкое производство',
-            link: '/',
+        slider: [{
+          image: '',
+          text: 'Почему я должен оцифровывать компанию?',
+          link: '/'
         },{
-            text: 'Система единичного заказа',
-            link: '/',
-        }, {
-            text: 'Удалённое управление',
-            link: '/',
+          image: '',
+          text: 'Как мне создать план по цифровизации?',
+          link: '/'
         },{
-            text: 'Смена поставщика',
-            link: '/',
-        }],
-        readMore: true,
+          image: '',
+          text: 'Какие цифровые инструменты полезны?',
+          link: '/'
+        },],
+        content: [{
+          "component": "contentTitle",
+          "value": "7 шагов по внедрению"
+        },{
+          "component": "contentParagraph",
+          "value": {
+              "text": "Внедрение системы состоит из 7 шагов"
+          }
+        },{
+          "component": "contentList",
+          "value": {
+              "items": [{
+                  "title": "Изучение",
+                  "text": "li-text-1"
+              },{
+                  "title": "Адаптация",
+                  "text": "li-text-1"
+              },{
+                  "title": "Внедрение",
+                  "text": "li-text-1"
+              },{
+                  "title": "Наполнение",
+                  "text": "li-text-1"
+              },{
+                  "title": "Создание потоков",
+                  "text": "li-text-1"
+              },{
+                  "title": "Запуск",
+                  "text": "li-text-1"
+              },{
+                  "title": "Анализ",
+                  "text": "li-text-1"
+              }]
+          }
+        },],
     }
   }
 }

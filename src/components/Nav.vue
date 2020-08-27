@@ -2,7 +2,7 @@
     <nav class="review-menu">
         <div class="container">
             <ul class="review-navigation">
-                <NavItem v-for="navItem in nav" :key="navItem.link" 
+                <NavItem v-for="(navItem,index) in nav" :key="`${index}_${navItem.link}`" 
                     :link="navItem.link"
                     :text="navItem.text"
                     :active="navItem.active"

@@ -4,6 +4,7 @@
         :nav="nav"
         :menu="menu"
         :slider="slider"
+        :content="content"
     />
   </div>
 </template>
@@ -52,6 +53,76 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Ограничения'
+        },{
+          component: 'ContentSubtitle',
+          value: 'Что должно быть достигнуто'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentSubtitle',
+          value: 'На какие вопросы нужно ответить'
+        },{
+          component: "contentList",
+          value: {
+              items: [{
+                  title: "Стратегия и организация",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              },{
+                  title: "Умная фабрика",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              },{
+                  title: "Умные операции",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              },{
+                  title: "Умные продукты",
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              },],
+          }
+        },{
+          component: 'ContentSubtitle',
+          value: 'Контрольный список'
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Определение целей",
+              },{
+                  title: "Расчёт добавленной стоимости",
+              },{
+                  title: "Идентификация",
+              },{
+                  title: "Определение",
+              },{
+                  title: "Получение",
+              },],
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },]
     }
   }
 }

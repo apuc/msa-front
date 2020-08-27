@@ -2,6 +2,7 @@
   <div class="CyberAndCongruenceLevel">
     <TextLayout 
         :nav="nav"
+        :content="content"
         :slider="slider"
     />
   </div>
@@ -41,6 +42,19 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content:[{
+          component: 'ContentTitle',
+          value: 'Кибернетический уровень (Cyber and congruence level)'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentImage',
+          value: {
+            src: ''}
+        },]
     }
   }
 }

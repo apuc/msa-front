@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :menu="menu"
+        :content="content"
         :slider="slider"
     />
   </div>
@@ -42,6 +43,76 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content:[{
+          component: 'ContentTitle',
+          value: 'Что MSA даёт моей компании'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },],
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },],
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },],
+          }
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: "ContentList",
+          value: {
+              items: [{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },{
+                  title: "Lorem ipsum dolor sit amet",
+              },],
+          }
+        },]
     }
   }
 }

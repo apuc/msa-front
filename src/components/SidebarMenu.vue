@@ -1,14 +1,12 @@
-<template>
-    <div class="container">        
-        <aside class="sidebar">
-            <ul class="chapters-list">            
-                <SidebarMenuItem v-for="sidebarMenuItem in menu" :key="sidebarMenuItem.href" 
-                    :href="sidebarMenuItem.href"
-                    :text="sidebarMenuItem.text"
-                />
-            </ul>
-        </aside>
-    </div>
+<template>        
+    <aside class="sidebar">
+        <ul class="chapters-list">            
+            <SidebarMenuItem v-for="sidebarMenuItem in menu" :key="sidebarMenuItem.href" 
+                :href="sidebarMenuItem.href"
+                :text="sidebarMenuItem.text"
+            />
+        </ul>
+    </aside>
 </template>
 
 <script>

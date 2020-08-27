@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :menu="menu"
+        :content="content"
         :readMore="readMore"
     />
   </div>
@@ -49,6 +50,35 @@ export default {
             {text: 'Примеры внедрения', link: '/'},
           ]
         ],
+        content: [{
+          component: 'ContentTitle',
+          value: 'CPS и CPPS ядро Industry 4.0'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentSubtitle',
+          value: 'Элементы стратегии CPS'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+          }
+        },{
+          component: 'ContentList',
+          items: [{
+            title: 'Горизонтальная интеграция',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+          },{
+            title: 'Проектирование',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+          },{
+            title: 'Вертикальная интеграция',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+          },]
+        },]
     }
   }
 }

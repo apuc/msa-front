@@ -2,7 +2,7 @@
   <div class="ConnectionLevel">
     <TextLayout 
         :nav="nav"
-        :menu="menu"
+        :content="content"
         :slider="slider"
     />
   </div>
@@ -42,6 +42,20 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content:[{
+          component: 'ContentTitle',
+          value: 'Уровень подключения (Connection level)'
+        },{
+          component: 'ContentParagraph',
+          value: {
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          }
+        },{
+          component: 'ContentImage',
+          value: {
+            src: ''  
+          }
+        },]
     }
   }
 }

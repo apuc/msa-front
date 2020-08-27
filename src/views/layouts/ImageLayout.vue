@@ -2,8 +2,10 @@
   <div class="layout">
     <div class="layout__content">
         <ImageWrapper :image="image">
-            <Description v-if="description" :description="description" />
-            <Download v-if="download" :download="download" />
+            <div class="container">
+              <Description v-if="description" :description="description" />
+              <Download v-if="download" :download="download" />
+            </div>
         </ImageWrapper>
         <Info v-if="info" :info="info" />
         <QuestionList v-if="questions" :questions="questions" />
@@ -26,8 +28,11 @@ export default {
     description: {
       title: String,
       text: String,
+      links: Array,
+      slider: Array,
     },
     download: {
+      title: String,
       text: String,
       image: String,
     },

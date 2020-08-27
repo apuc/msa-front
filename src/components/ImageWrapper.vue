@@ -1,5 +1,5 @@
 <template>
-    <div class="image-wrapper container" :style="{ backgroundImage: 'url(' + image + ')' }">
+    <div class="image-wrapper" :style="{ backgroundImage: 'url(' + image + ')' }">
         <div class="container">
             <slot></slot>
         </div>

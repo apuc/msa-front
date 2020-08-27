@@ -3,6 +3,7 @@
     <TextLayout 
         :nav="nav"
         :menu="menu"
+        :content="content"
         :slider="slider"
     />
   </div>
@@ -52,6 +53,60 @@ export default {
           text: 'Какие цифровые инструменты полезны?',
           link: '/'
         },],
+        content: [{
+          component: 'ContentTitle',
+          value: 'Инвентаризация'
+        },{
+          component: 'ContentSubtitle',
+          value: 'Что должно быть достигнуто'
+        },{
+          component: "contentParagraph",
+          value: {
+              text: "Независимо от отрасли и ориентации на частных лиц...",
+          }
+        },{
+          component: 'ContentSubtitle',
+          value: 'На какие вопросы нужно ответить?'
+        },{
+          component: "contentList",
+          value: {
+              items: [{
+                  title: "Как организованы процессы",
+                  text: 'Описание...'
+              },{
+                  title: "Какая техническая инфраструктура",
+                  text: 'Описание...'
+              },{
+                  title: "Какие процессы должны работать",
+                  text: 'Описание...'
+              },{
+                  title: "Кто должен оцифровывать",
+                  text: 'Описание...'
+              },],
+          }
+        },{
+          component: "contentList",
+          value: {
+              items: [{
+                  title: "Определение...",
+              },{
+                  title: "Обеспечение...",
+              },{
+                  title: "Разъяснение...",
+              },{
+                  title: "Рассмотрение...",
+              },{
+                  title: "Проверка...",
+              },{
+                  title: "Определение...",
+              },],
+          }
+        },{
+          component: "contentParagraph",
+          value: {
+              text: "Если вы смогли заполнить контрольный список...",
+          }
+        },]
     }
   }
 }

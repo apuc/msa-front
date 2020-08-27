@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import store from '../store';
 
 const AboutSystem = () => import('../pages/text/AboutSystem');
@@ -56,7 +55,6 @@ const MSAReview = () => import('../pages/image/MSAReview');
 const OurSolution = () => import('../pages/image/OurSolution');
 
 Vue.use(VueRouter);
-
 
   const routes = [
   {
