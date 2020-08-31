@@ -42,11 +42,11 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch('getLeftPageMenu', this.$router.currentRoute.meta.name)
+    this.$store.dispatch('getLeftPageMenu', this.$router.currentRoute.name)
       .then(data => {
         return data;
       });
-    this.$store.dispatch('getTopPageMenu', this.$router.currentRoute.meta.name)
+    this.$store.dispatch('getTopPageMenu', this.$router.currentRoute.name)
       .then(data => {
         return data;
       });
