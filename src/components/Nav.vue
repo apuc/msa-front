@@ -2,11 +2,10 @@
     <nav class="review-menu">
         <div class="container">
             <ul class="review-navigation">
-                <NavItem v-for="navItem in nav" :key="`${navItem.id}_${navItem.slug}`" 
-                    :id="navItem.id"
+                <NavItem v-for="navItem in nav" :key="`${navItem.term_id}_${navItem.slug}`" 
+                    :id="navItem.term_id"
                     :slug="navItem.slug"
                     :name="navItem.name"
-                    :active="navItem.active"
                 />
             </ul>
         </div>

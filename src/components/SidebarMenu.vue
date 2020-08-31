@@ -1,12 +1,10 @@
 <template>        
     <aside class="sidebar">
         <ul class="chapters-list">            
-            <SidebarMenuItem v-for="sidebarMenuItem in menu" :key="`${sidebarMenuItem.id}_${sidebarMenuItem.slug}`" 
-                :id="sidebarMenuItem.id"
+            <SidebarMenuItem v-for="sidebarMenuItem in menu" :key="`${sidebarMenuItem.term_id}_${sidebarMenuItem.slug}`" 
+                :id="sidebarMenuItem.term_id"
                 :slug="sidebarMenuItem.slug"
                 :name="sidebarMenuItem.name"
-                :active="sidebarMenuItem.active"
-                @setActive="setActive(sidebarMenuItem.id)"
             />
         </ul>
     </aside>
@@ -22,20 +20,6 @@ export default {
     props: {
         menu: Array
     },
-    methods: {
-        setActive(id) {
-            this.menu.map(item => {
-                if(item.id === id) {
-                    return {
-                        ...item,
-                        active: true
-                    }
-                }
-
-                return item;
-            })
-        }
-    }
 }
 </script>
 

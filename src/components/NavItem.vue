@@ -1,5 +1,5 @@
 <template>
-    <li class="review-navigation__page" :class="active?'active':''">
+    <li class="review-navigation__page">
         <a class="review-navigation__link" :href="'#'+slug">{{name}}</a>
     </li>
 </template>
@@ -11,7 +11,6 @@ export default {
         id: Number,
         slug: String,
         name: String,
-        active: Boolean
     }
 }
 </script>
