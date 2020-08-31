@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
-    <Nav v-if="nav" :nav="nav" />
+    <Nav v-if="getTopPageMenu" :nav="getTopPageMenu" />
     <div class="contentWrapper">
-      <SidebarMenu v-if="menu" :menu="menu" />
+      <SidebarMenu v-if="getLeftPageMenu" :menu="getLeftPageMenu" />
       <div v-if="content" class="article container">
           <div v-for="(item,index) in content" :is="item.component" :value="item.value" :key="`${index}_${item.component}`" />
       </div> 
@@ -24,6 +24,9 @@ import ContentList from '@/components/Content/List.vue';
 import ContentSubtitle from '@/components/Content/Subtitle.vue';
 import ContentImage from '@/components/Content/Image.vue';
 
+import axios from '@/api';
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'TextLayout',
   components: {
@@ -37,6 +40,25 @@ export default {
     readMore: Array,
     content: Array,
   },
+
+  mounted() {
+    this.$store.dispatch('getLeftPageMenu', this.$router.currentRoute.meta.name)
+      .then(data => {
+        return data;
+      });
+    this.$store.dispatch('getTopPageMenu', this.$router.currentRoute.meta.name)
+      .then(data => {
+        return data;
+      });
+  },
+
+  computed: {
+    ...mapGetters([
+      'getContent',
+      'getTopPageMenu',
+      'getLeftPageMenu',
+    ])
+  }
 }
 </script>
 

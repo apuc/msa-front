@@ -1,6 +1,6 @@
 <template>
     <li class="chapters-list__page" :class="active?'active':''">
-        <a class="chapters-list__link" :href="link">{{text}}</a>
+        <a class="chapters-list__link" :href="'#'+slug">{{name}}</a>
     </li>
 </template>
 
@@ -8,8 +8,9 @@
 export default {
     name: 'SidebarMenuItem',
     props: {
-        link: String,
-        text: String,
+        id: Number,
+        slug: String,
+        name: String,
         active: Boolean
     }
 }

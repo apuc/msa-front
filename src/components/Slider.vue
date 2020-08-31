@@ -55,14 +55,7 @@ export default {
                   text: item.title.rendered,
                   link: item.link,
                 })
-              })
-                // res.data.map( (item,index) => {
-                //     this.sliderItems[index] = {
-                //         image: item.better_featured_image.source_url,
-                //         text: item.title.rendered,
-                //         link: item.link,
-                //     }
-                // })
+              });
             })
     },
     methods: {
