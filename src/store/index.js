@@ -20,19 +20,19 @@ const emitAction = (mutation, commit, payload) => {
 
 export default new Vuex.Store({
   state: {
-    content: {},
-    left_page_menu: {},
-    top_page_menu: {},
+    content: [],
+    left_page_menu: [],
+    top_page_menu: [],
   },
   mutations: {
     GET_CONTENT: (state,payload) => {
-      state.content = payload.content
+      state.content = payload.content;
     },
     GET_LEFT_PAGE_MENU: (state,payload) => {
-      state.left_page_menu = payload.left_page_menu
+      state.left_page_menu = payload[0].left_page_menu;
     },
     GET_TOP_PAGE_MENU: (state,payload) => {
-      state.top_page_menu = payload.top_page_menu
+      state.top_page_menu = payload[0].top_page_menu;
     },
   },
   actions: {
