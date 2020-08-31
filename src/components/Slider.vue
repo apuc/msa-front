@@ -6,11 +6,11 @@
             </div>
         </div>
         <div class="container involucre-list">
-            <SliderItem v-for="sliderItem in sliderShow" :key="sliderItem.text" 
+            <SliderItem v-for="sliderItem in sliderShow" :key="sliderItem.text"
                 :image="sliderItem.image"
                 :text="sliderItem.text"
                 :link="sliderItem.link"
-            />            
+            />
         </div>
         <div class="questions__button--wrapper">
             <div class="questions__button questions__button--next">
@@ -47,15 +47,22 @@ export default {
         }
     },
     mounted() {
-        axios.get('/wp-json/wp/v2/msa_slider/')
+        axios.get('http://industrial.loc/wp-json/wp/v2/msa_slider/')
             .then(res => {
-                res.data.map( (item,index) => {
-                    this.sliderItems[index] = {
-                        image: item.better_featured_image.source_url,
-                        text: item.title.rendered,
-                        link: item.link,
-                    }
+              res.data.forEach((item) => {
+                this.sliderItems.push({
+                  image: item.better_featured_image.source_url,
+                  text: item.title.rendered,
+                  link: item.link,
                 })
+              })
+                // res.data.map( (item,index) => {
+                //     this.sliderItems[index] = {
+                //         image: item.better_featured_image.source_url,
+                //         text: item.title.rendered,
+                //         link: item.link,
+                //     }
+                // })
             })
     },
     methods: {
