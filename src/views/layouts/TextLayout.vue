@@ -5,7 +5,8 @@
       <SidebarMenu v-if="getLeftPageMenu" :menu="getLeftPageMenu" />
       <div v-if="content" class="article container">
           <div v-for="(item,index) in content" :is="item.component" :value="item.value" :key="`${index}_${item.component}`" />
-      </div> 
+          <template v-for="(e,i) in contentRendered"><div v-html="e.content"></div><h1 v-html="e.title"></h1></template>
+      </div>
     </div>
     <Slider v-if="slider" :slider="slider" />
     <ReadMore v-if="readMore" :readMore="readMore" />
@@ -41,7 +42,7 @@ export default {
     content: Array,
   },
 
-  mounted() {
+  async mounted() {
     this.$store.dispatch('getLeftPageMenu', this.$router.currentRoute.name)
       .then(data => {
         return data;
@@ -50,8 +51,17 @@ export default {
       .then(data => {
         return data;
       });
+    const result = (await axios.get('test')).data
+    result.forEach(e=>{
+      this.contentRendered.push({
+        content : result[0].content.rendered,
+        title: result[0].title.rendered
+      })
+    })
   },
-
+  data: () => ({
+    contentRendered: [],
+  }),
   computed: {
     ...mapGetters([
       'getContent',
