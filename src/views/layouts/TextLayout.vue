@@ -5,7 +5,7 @@
       <SidebarMenu v-if="getLeftPageMenu" :menu="getLeftPageMenu" />
       <div v-if="content" class="article container">
           <div v-for="(item,index) in content" :is="item.component" :value="item.value" :key="`${index}_${item.component}`" />
-          <template v-for="(e,i) in contentRendered"><div v-html="e.content"></div><h1 v-html="e.title"></h1></template>
+          <template v-for="(e) in contentRendered"><div v-html="e.content"></div><h1 v-html="e.title"></h1></template>
       </div>
     </div>
     <Slider v-if="slider" :slider="slider" />
@@ -51,13 +51,13 @@ export default {
       .then(data => {
         return data;
       });
-    // const result = (await axios.get(`${process.env.VUE_APP_LOCAL_URL}/wp-json/wp/v2/msa_slider/`)).data
-    // result.forEach(e=>{
-    //   this.contentRendered.push({
-    //     content : result[0].content.rendered,
-    //     title: result[0].title.rendered
-    //   })
-    // })
+    const result = (await axios.get(`${process.env.VUE_APP_LOCAL_URL}/wp-json/wp/v2/pages?slug=aboutSystem`)).data
+    result.forEach(e=>{
+      this.contentRendered.push({
+        content : e.content.rendered,
+        title: e.title.rendered
+      })
+    })
   },
   data: () => ({
     contentRendered: [],
