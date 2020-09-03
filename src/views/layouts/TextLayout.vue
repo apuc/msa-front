@@ -51,13 +51,14 @@ export default {
       .then(data => {
         return data;
       });
-    const result = (await axios.get('test')).data
-    result.forEach(e=>{
-      this.contentRendered.push({
-        content : result[0].content.rendered,
-        title: result[0].title.rendered
-      })
-    })
+    // const result = (await this.$API.slider()).data
+    // result.forEach(e=>{
+    //   this.contentRendered.push({
+    //     content : result[0].content.rendered,
+    //     title: result[0].title.rendered
+    //   })
+    // })
+    // console.log(this.contentRendered)
   },
   data: () => ({
     contentRendered: [],
