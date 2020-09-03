@@ -1,9 +1,7 @@
 <template>
   <div class="menu__container">
     <div class="container__inner">
-<!--            <div>-->
-<!--              <img class="menu__image" src="@/assets/images/form-bg.png"/>-->
-<!--            </div>-->
+      <img class="menu__image" src="@/assets/images/form-bg.png"/>
       <div>
         <div class="menu__form">
           <my-input label="Ваше Имя" v-model.trim="name"/>
@@ -67,11 +65,13 @@ textarea{
     height: 100vh;
     width: auto;
     max-width: 746px;
+    width: 50%;
     //z-index: 3;
   }
 
   &__form {
     max-width: 652px;
+    //width: 50%;
   }
 }
 
