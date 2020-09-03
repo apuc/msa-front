@@ -1,9 +1,9 @@
 <template>
   <div class="menu__container">
     <div class="container__inner">
-      <!--      <div>-->
-      <!--        <img class="menu__image" src="@/assets/images/form-bg.png"/>-->
-      <!--      </div>-->
+<!--            <div>-->
+<!--              <img class="menu__image" src="@/assets/images/form-bg.png"/>-->
+<!--            </div>-->
       <div>
         <div class="menu__form">
           <my-input label="Ваше Имя" v-model.trim="name"/>
@@ -42,6 +42,7 @@ export default {
 textarea{
   resize: none;
   width: 100%;
+  max-width: 650px;
   outline: none;
   margin-bottom: 35px;
 }
@@ -70,7 +71,7 @@ textarea{
   }
 
   &__form {
-    min-width: 652px;
+    max-width: 652px;
   }
 }
 

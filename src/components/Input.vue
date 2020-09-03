@@ -47,6 +47,8 @@ export default {
 }
 .input-container{
   margin-bottom: 44px;
+  min-width:200px;
+  max-width: 650px;
 }
 .input-container input {
   border: 0;
