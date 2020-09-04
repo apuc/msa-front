@@ -3,7 +3,7 @@
     <div class="layout__content">
         <ImageWrapper :image="image">
             <div class="container">
-              <Description v-if="description" :description="description" />
+              <Description v-if="description.length>0" :description="description" />
               <Download v-if="download" :download="download" />
             </div>
         </ImageWrapper>
@@ -20,7 +20,8 @@ import Info from '@/components/Info';
 import QuestionList from '@/components/QuestionList';
 export default {
   components: {
-    ImageWrapper,Download, Info, QuestionList,
+    Download, Info, QuestionList,
+    ImageWrapper: ()=>import('@/components/ImageWrapper'),
     Description :()=> import('@/components/Description')
   },
   props: {
