@@ -51,7 +51,7 @@ export default {
       .then(data => {
         return data;
       });
-    const result = (await axios.get(`${process.env.VUE_APP_LOCAL_URL}/wp-json/wp/v2/pages?slug=aboutSystem`)).data
+    const result = (await axios.get(`/wp-json/wp/v2/pages?slug=aboutSystem`)).data
     result.forEach(e=>{
       this.contentRendered.push({
         content : e.content.rendered,

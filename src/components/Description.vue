@@ -1,7 +1,7 @@
 <template>
   <article class="header__article">
-    <h1 class="header__article--title">{{ description.title }}</h1>
-    <p class="header__article--description">{{ description.text }}</p>
+    <h1 class="header__article--title">{{ description[slideIndex].title }}</h1>
+    <div class="header__article--description" v-html="description[slideIndex].text"></div>
     <!-- <span class="link-detailed--description">подробнее</span> -->
 
     <ul class="information__list" v-if="description.links">
@@ -10,16 +10,16 @@
       </li>
     </ul>
 
-    <div v-if="description.slider" class="header__slider">
+    <div v-if="description.length>0" class="header__slider">
       <div class="header__dots">
         <div class="header__dot" @click="activeSlide(index)" :class="`${index===slideIndex?'active':''}`"
-             v-for="(dot,index) in description.slider" :key="index"></div>
+             v-for="(dot,index) in description.length" :key="index"></div>
       </div>
       <div class="header__arrows">
         <img src="@/assets/images/left-arrow.svg" alt=""
-             @click="slideIndex===0 ? slideIndex=description.slider.length-1: slideIndex--">
+             @click="slideIndex===0 ? slideIndex=description.length-1: slideIndex--">
         <img src="@/assets/images/left-arrow.svg" alt=""
-             @click="slideIndex===description.slider.length-1?slideIndex=0: slideIndex++ ">
+             @click="slideIndex===description.length-1?slideIndex=0: slideIndex++ ">
         <!--                <div><img src="@/assets/images/right-arrow.png" alt=""></div>-->
       </div>
     </div>
@@ -30,11 +30,19 @@
 export default {
   props: {
     description: {
-      title: String,
-      text: String,
-      links: Array,
-      slider: Array
+      type: Array,
+      default: [{
+        title: 'hi',
+        text: 'hm'
+      }]
+      // title: String,
+      // text: String,
+      // links: Array,
+      // slider: Array
     },
+  },
+  mounted() {
+    console.log(this.description[this.slideIndex])
   },
   data: () => ({
     slideIndex: 0

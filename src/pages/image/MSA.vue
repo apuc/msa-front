@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <ImageLayout 
+    <ImageLayout
       :image="image"
       :description="description"
       :download="download"
@@ -11,21 +11,22 @@
 
 <script>
 
-import ImageLayout from '@/views/layouts/ImageLayout.vue'
+import axios from '@/api';
 
 export default {
   name: 'MSA',
   components: {
-    ImageLayout
+    ImageLayout :()=> import('@/views/layouts/ImageLayout.vue')
+  },
+  async mounted() {
+    const result = (await axios.get('wp-json/wp/v2/main_slider/')).data
+    result.forEach(e=>this.description.push({text: e.content.rendered, title: e.title.rendered}))
+    console.log(this.description)
   },
   data() {
     return {
       image: 'https://html.craft-group.xyz/img/msa/bgr.png',
-      description: {
-        title: 'Автоматизация производства',
-        text: 'Цифровое описание производственных потоков, их автоматизация, мониторинг и контроль для перехода к системному управлению предприятием.',
-        slider: [1,2,3,4]
-      },
+      description: [],
       download: {
         image: 'https://html.craft-group.xyz/img/msa/industry.png',
       },

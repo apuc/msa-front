@@ -15,13 +15,13 @@
 
 <script>
 import ImageWrapper from '@/components/ImageWrapper';
-import Description from '@/components/Description';
 import Download from '@/components/Download';
 import Info from '@/components/Info';
 import QuestionList from '@/components/QuestionList';
 export default {
   components: {
-    ImageWrapper, Description, Download, Info, QuestionList
+    ImageWrapper,Download, Info, QuestionList,
+    Description :()=> import('@/components/Description')
   },
   props: {
     image: String,
